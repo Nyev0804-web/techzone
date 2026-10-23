@@ -1,0 +1,12 @@
+ẢNH SẢN PHẨM THẬT ĐƯỢC NHÚNG TỪ WEB (cần kết nối Internet):
+
+1. Bàn phím ATK RS7 Turbo (ảnh listing): https://m.media-amazon.com/images/I/717ua1pj2ZL.jpg
+   Trang hãng: https://www.atk.store/products/atk-rs7-turbo-semi-aluminum-esports-hall-effect-keyboard
+2. Chuột ATK Blazing Sky F1: https://www.atk.store/cdn/shop/files/ATK_Blazing_Sky_F1_Black_1200x.jpg?v=1756979076
+   Trang hãng: https://www.atk.store/products/atk-blazing-sky-f1-series-wireless-mouse
+3. Tai nghe ATK Neptune N9 Ultra: https://bizweb.dktcdn.net/thumb/grande/100/443/218/products/size-anh-sp-web-1-4d2080ca-3660-4334-b480-326ee79fd32b.png?v=1766581411603
+   Trang bán lẻ: https://techspace.vn/tai-nghe-khong-day-atk-neptune-n9-ultra
+4. Lót chuột ATK x Leviatan: https://www.atk.store/cdn/shop/files/2jpg.jpg?v=1745388738&width=1100
+   Trang hãng: https://www.atk.store/products/atk-x-leviatan-esports-gaming-mouse-pad
+
+Lưu ý: website dùng ảnh trực tiếp từ URL bên ngoài, không phải ảnh AI và không tải ảnh về thư mục. Ảnh RS7 được dùng cho thẻ ATK68 như ảnh tham khảo bàn phím; nên thay bằng ảnh ATK68 đúng SKU khi có URL xác thực. Thẻ IEM được ẩn khỏi khu vực sản phẩm nổi bật vì chưa tìm được ảnh IEM thật đã xác minh; hồ sơ chi tiết IEM vẫn còn trong mã nguồn.

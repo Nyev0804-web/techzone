@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TEA STATION - Cửa hàng trà thủ công: trà đen, trà xanh hoa nhài, công thức riêng và giao hàng tận nhà." />
+  <meta name="theme-color" content="#7cb342" />
+  <title>TEA STATION | Fresh Tea Every Day</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome (icon) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- SwiperJS (Slideshow) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- GLightbox (Lightbox sản phẩm - Lab 8.1) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="labs.css" />
+</head>
+<body>
+  <!-- Facebook SDK (Like / Share / Comment - Lab 7.2) -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v19.0"></script>
+
+  <div class="lab-bar">
+    <a href="labs.html" class="lab-home"><i class="fa-solid fa-table-cells-large"></i> <span>Tất cả Lab</span></a>
+    <p class="lab-label"><strong>Lab 8.2</strong>Bản hoàn chỉnh - Responsive 992px / 768px</p>
+    <nav class="lab-pager" aria-label="Chuyển Lab">
+      <a href="lab-8-1.html" aria-label="Lab 8.1"><i class="fa-solid fa-chevron-left"></i></a>
+      <span aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+    </nav>
+  </div>
+
+  <div class="page">
+    <!-- ================= NAVIGATION ================= -->
+    <nav class="navbar" aria-label="Điều hướng chính">
+      <div class="nav-center">
+        <a href="#home" class="logo">TEA <span>STATION</span></a>
+        <button class="nav-toggle" id="navToggle" aria-label="Mở menu" aria-controls="sidebar" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Slide-out menu -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar" aria-hidden="true">
+      <button class="sidebar-close" id="sidebarClose" aria-label="Đóng menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <a href="#home" class="logo">TEA <span>STATION</span></a>
+      <ul class="sidebar-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <ul class="social-icons">
+        <li><a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+        <li><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+      </ul>
+    </aside>
+
+    <!-- ================= HERO BANNER + SLIDESHOW ================= -->
+    <header class="header" id="home">
+      <div class="swiper hero-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image: url('images/hero-1.png')"></div>
+          <div class="swiper-slide" style="background-image: url('images/hero-2.png')"></div>
+          <div class="swiper-slide" style="background-image: url('images/hero-3.png')"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev" aria-label="Ảnh trước"></div>
+        <div class="swiper-button-next" aria-label="Ảnh sau"></div>
+      </div>
+      <div class="banner">
+        <p class="banner-sub">Welcome to</p>
+        <h1 class="banner-title">TEA <span>STATION</span></h1>
+        <p class="banner-text">Fresh hand-picked tea, brewed with love every single day.</p>
+        <div class="banner-actions">
+          <a href="#products" class="btn btn-primary">Explore Tea</a>
+          <button type="button" class="btn btn-outline" id="videoBtn">
+            <i class="fa-solid fa-play"></i> Watch How We Brew
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= FEATURES (Lab 6.1 & 6.2) ================= -->
+    <section id="features" aria-label="Điểm nổi bật">
+      <article class="feature_item">
+        <span class="feature_icon"><i class="fa-solid fa-heart"></i></span>
+        <h2 class="feature_title">Made With Love</h2>
+        <p class="feature_text">Every leaf is selected and roasted carefully by our tea masters.</p>
+      </article>
+      <article class="feature_item feature_item--highlight">
+        <span class="feature_icon"><i class="fa-solid fa-leaf"></i></span>
+        <h2 class="feature_title">Relaxation</h2>
+        <p class="feature_text">Slow down, breathe deep and enjoy a calm moment in every cup.</p>
+      </article>
+      <article class="feature_item">
+        <span class="feature_icon"><i class="fa-solid fa-bolt"></i></span>
+        <h2 class="feature_title">Energy</h2>
+        <p class="feature_text">Natural caffeine and antioxidants to power your whole day.</p>
+      </article>
+      <article class="feature_item">
+        <span class="feature_icon"><i class="fa-solid fa-book-open"></i></span>
+        <h2 class="feature_title">Family Recipe</h2>
+        <p class="feature_text">Secret blends passed down through three generations.</p>
+      </article>
+    </section>
+
+    <!-- ================= ABOUT US (Lab 6.2) ================= -->
+    <section id="about">
+      <div class="about-img">
+        <img src="images/about.png" alt="Ấm trà và tách trà sứ trắng" loading="lazy" />
+      </div>
+      <div class="about-info">
+        <h2 class="section-title">About Our <span>TEA STATION</span></h2>
+        <div class="underline"></div>
+        <p>
+          TEA STATION began as a small family kiosk in the hills, where our grandparents brewed tea
+          for travelers passing by. Decades later, we still follow the same recipes, sourcing leaves
+          directly from local farmers and roasting them in small batches.
+        </p>
+        <p>
+          Today we bring that tradition to your table &mdash; honest tea, carefully crafted, served
+          with a warm smile.
+        </p>
+        <a href="#services" class="btn btn-primary">Learn More</a>
+
+        <!-- Like / Share Facebook (Lab 7.2) -->
+        <div class="social-plugins">
+          <div class="fb-like" data-href="https://www.facebook.com/" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
+          <button type="button" class="btn-share" id="shareBtn">
+            <i class="fa-solid fa-share-nodes"></i> Share
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRODUCTS (Lab 6.2) ================= -->
+    <section id="products">
+      <div class="products-title">
+        <h2 class="section-title section-title--light">Check Out <span>Our Products</span></h2>
+        <div class="underline"></div>
+        <p>Premium loose-leaf teas, packed fresh to keep every bit of aroma.</p>
+        <a href="#contact" class="btn btn-primary">Inventory</a>
+      </div>
+
+      <article class="product">
+        <a href="images/black-tea.png" class="glightbox product-img" data-title="Black Long Tea - $3.99">
+          <img src="images/black-tea.png" alt="Trà đen lá dài Black Long Tea" loading="lazy" />
+          <span class="product-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+        </a>
+        <div class="product-info">
+          <h3>Black Long Tea</h3>
+          <p class="product-price">$3.99</p>
+        </div>
+      </article>
+
+      <article class="product">
+        <a href="images/green-tea.png" class="glightbox product-img" data-title="Green Tea With Jasmine - $4.99">
+          <img src="images/green-tea.png" alt="Trà xanh hoa nhài Green Tea With Jasmine" loading="lazy" />
+          <span class="product-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+        </a>
+        <div class="product-info">
+          <h3>Green Tea With Jasmine</h3>
+          <p class="product-price">$4.99</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= SERVICES (Lab 6.2) ================= -->
+    <section id="services">
+      <div class="section-heading">
+        <h2 class="section-title">Our <span>Services</span></h2>
+        <div class="underline"></div>
+      </div>
+      <div class="services-center">
+        <article class="service">
+          <span class="service-icon"><i class="fa-solid fa-mortar-pestle"></i></span>
+          <h3>Custom Recipe</h3>
+          <p>Tell us your taste and we will blend a tea made just for you.</p>
+        </article>
+        <article class="service">
+          <span class="service-icon"><i class="fa-solid fa-truck-fast"></i></span>
+          <h3>Home Delivery</h3>
+          <p>Freshly packed tea delivered to your door within 24 hours.</p>
+        </article>
+        <article class="service">
+          <span class="service-icon"><i class="fa-solid fa-hourglass-half"></i></span>
+          <h3>Tea Aging</h3>
+          <p>We store and age your favorite teas under ideal conditions.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= VIDEO + COMMENT (Lab 7.2) ================= -->
+    <section id="community">
+      <div class="section-heading">
+        <h2 class="section-title">Tea <span>Community</span></h2>
+        <div class="underline"></div>
+      </div>
+      <div class="community-center">
+        <div class="video-box">
+          <h3>How We Brew Our Tea</h3>
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/qfexmhtNyAs"
+              title="Quy trình pha trà - How to Brew Loose Leaf Tea"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="comment-box">
+          <h3>Leave A Comment</h3>
+          <p class="comment-hint">Chia sẻ cảm nhận của bạn qua Facebook Comments (cần đăng nhập Facebook và chạy trên tên miền thật).</p>
+          <div class="fb-comments" data-href="https://www.facebook.com/" data-width="100%" data-numposts="3"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT + MAP (Lab 7.2 & 8.1) ================= -->
+    <section id="contact">
+      <div class="section-heading">
+        <h2 class="section-title">Contact <span>Us</span></h2>
+        <div class="underline"></div>
+      </div>
+      <div class="contact-center">
+        <div class="contact-info">
+          <article class="contact-item">
+            <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+            <div>
+              <h3>Address</h3>
+              <p>123 Nguyen Hue Street, District 1, Ho Chi Minh City</p>
+            </div>
+          </article>
+          <article class="contact-item">
+            <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <h3>Email</h3>
+              <p><a href="mailto:hello@teastation.com">hello@teastation.com</a></p>
+            </div>
+          </article>
+          <article class="contact-item">
+            <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <h3>Telephone</h3>
+              <p><a href="tel:+84281234567">+84 28 1234 567</a></p>
+            </div>
+          </article>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+          </div>
+          <p class="form-alert" id="formAlert" role="status" aria-live="polite"></p>
+          <button type="submit" class="btn btn-primary btn-block">Submit Here</button>
+        </form>
+      </div>
+
+      <div class="map-frame">
+        <iframe
+          title="Bản đồ cửa hàng TEA STATION"
+          src="https://maps.google.com/maps?q=Nguyen%20Hue%20Walking%20Street%2C%20Ho%20Chi%20Minh&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER (Lab 8.1) ================= -->
+    <footer class="footer">
+      <a href="#home" class="logo">TEA <span>STATION</span></a>
+      <ul class="social-icons">
+        <li><a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+        <li><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+      </ul>
+      <p class="copyright">
+        &copy; <span id="year">2021</span> TEA STATION. Designed by <span class="highlight">JOHN SMILGA</span>. All rights reserved.
+      </p>
+    </footer>
+  </div>
+
+  <!-- Video modal -->
+  <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Video giới thiệu quy trình pha trà" hidden>
+    <div class="video-modal-content">
+      <button class="video-modal-close" id="videoClose" aria-label="Đóng video">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="video-frame" id="videoModalFrame"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
